@@ -1,0 +1,54 @@
+<!-- This element has been changed to linear layout per "building simple interface" instructions
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    This element has been deleted per "building simple interface" instructions
+    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
+-->
+<!--LinearLayout notes:
+match_parent uses all the screen space of the blank activity.
+@+id (named edit_message in this case) is used in the Java. the entry can now be caught by
+    findViewById(R.id.edit_message) in the sendMessage method of this packages MainActivity
+    class
+@string is a reference to value in res/values/strings.xml
+wrap_content shortens element to content length
+EditText width was originally wrap_content but changed for maximum user input (and better
+    performance because of the lack of a "remaining space filler calculation)
+EditText and Button are both widgets. note that future versions should place additional
+    widgets in activity_main.xml layout area
+Button onClick is actually calling the method sendMessage from it's MainActivity class
+I have decided to leave out all tutorial instances of the fallowing code because it seems
+    like it may have been requiered for an earlyer version of the software:
+    <?xml version="1.0" encoding="utf-8"?> (this exists on the first line of several pages
+    in the tutorial)
+The tutorial instructed me to add xmlns:tools="http://schemas.android.com/tools" on line
+    2 of LinearLayout, but it was never used so I moved it here just in case I ended up
+    needing it. Similarly, the code required me to use
+    xmlns:andriod="http://schemas.android.com/apk/res-auto" when autofilling but when I
+    retyped it and added the end tag last it was no longer required-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+<EditText
+    android:layout_weight="1"
+    android:id="@+id/edit_message"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="@string/edit_message" />
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/button_send"
+    android:onClick="sendMessage"/>
+
+</LinearLayout>

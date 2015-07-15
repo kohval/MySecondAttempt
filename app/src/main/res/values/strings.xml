@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MySecondAttempt</string>
+    <string name="edit_message">Enter a massage</string>
+    <string name="button_send">Send</string>
+    <!-- Tutorial said to delete this -->
+    <string name="hello_world">Hello world!</string>
+
+    <string name="action_settings">Settings</string>
+    <!-- Unlike the title_activity_string name, the string name below was created with its class-->
+    <string name="title_activity_display_message">Main Message</string>
+
+
+    <!-- Below is a resource that seemed to already be there according to the tutorial but
+    wasn't, so I added it here (just in case)
+    <string name="title_activity_main">MainActivity</string>
+    -->
+</resources>
